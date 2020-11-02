@@ -9,8 +9,8 @@ print("Welcome, player! In this game you will guess a number between 1 and 100.\
 
 while number_of_guesses != 0:
     guess = int(input("Guess a number between 1 and 100: "))
-   
-    while guess < 0 or guess > 100:
+
+    while guess <= 0 or guess > 100:
         print("Please input a number within the valid range!")
         guess = int(input("Guess a number between 1 and 100: "))
 
@@ -24,3 +24,7 @@ while number_of_guesses != 0:
         print("Not correct, but try a lower number!")
     elif guess < SECRET:
         print("Not correct, but next time aim higher!")
+
+if number_of_guesses == 0 and guess != SECRET:
+    print(f"Sorry, you lose. The number was {SECRET}")
+
