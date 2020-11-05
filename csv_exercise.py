@@ -4,7 +4,7 @@ if __name__ == "__main__":
     p = Path(".", "data", "file.csv")
     lines = p.open(mode="r").readlines()
 
-    for index, line in enumerate(lines):
+    for line in lines:
         row = line.split(",")
         if line.lower().startswith("name"):
             continue
